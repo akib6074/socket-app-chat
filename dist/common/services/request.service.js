@@ -11,12 +11,10 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
-var _a;
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.RequestService = void 0;
 const common_1 = require("@nestjs/common");
 const core_1 = require("@nestjs/core");
-const express_1 = require("express");
 let RequestService = class RequestService {
     constructor(request) {
         this.request = request;
@@ -70,6 +68,6 @@ exports.RequestService = RequestService;
 exports.RequestService = RequestService = __decorate([
     (0, common_1.Injectable)(),
     __param(0, (0, common_1.Inject)(core_1.REQUEST)),
-    __metadata("design:paramtypes", [typeof (_a = typeof express_1.Request !== "undefined" && express_1.Request) === "function" ? _a : Object])
+    __metadata("design:paramtypes", [Object])
 ], RequestService);
 //# sourceMappingURL=request.service.js.map

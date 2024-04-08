@@ -5,7 +5,6 @@ const app_module_1 = require("./app.module");
 const config_1 = require("@nestjs/config");
 const common_1 = require("@nestjs/common");
 const socket_io_adapter_1 = require("./socket-io-adapter");
-const basicAuth = require("express-basic-auth");
 const swagger_1 = require("@nestjs/swagger");
 const SWAGGER_ENVS = ['dev', 'prod', 'uat'];
 async function bootstrap() {
@@ -30,6 +29,7 @@ async function bootstrap() {
         ],
     });
     app.useWebSocketAdapter(new socket_io_adapter_1.SocketIOAdapter(app, configService));
+    const basicAuth = require('express-basic-auth');
     if (SWAGGER_ENVS.includes(process.env.NODE_ENV || 'development')) {
         app.use(['/apidoc'], basicAuth({
             challenge: true,

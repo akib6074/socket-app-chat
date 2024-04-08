@@ -7,5 +7,5 @@ export declare class AuthMiddleware implements NestMiddleware {
     private readonly redisService;
     constructor(configService: ConfigService, redisService: RedisService);
     private static toResponse;
-    use(req: Request, res: Response, next: NextFunction): Promise<Response>;
+    use(req: Request, res: Response, next: NextFunction): Promise<Response<any, Record<string, any>>>;
 }

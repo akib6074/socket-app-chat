@@ -9,7 +9,6 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var PollsService_1;
-var _a;
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.PollsService = void 0;
 const common_1 = require("@nestjs/common");
@@ -112,6 +111,7 @@ let PollsService = PollsService_1 = class PollsService {
 exports.PollsService = PollsService;
 exports.PollsService = PollsService = PollsService_1 = __decorate([
     (0, common_1.Injectable)(),
-    __metadata("design:paramtypes", [polls_repository_1.PollsRepository, typeof (_a = typeof jwt_1.JwtService !== "undefined" && jwt_1.JwtService) === "function" ? _a : Object])
+    __metadata("design:paramtypes", [polls_repository_1.PollsRepository,
+        jwt_1.JwtService])
 ], PollsService);
 //# sourceMappingURL=polls.service.js.map

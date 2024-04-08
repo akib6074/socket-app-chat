@@ -12,7 +12,6 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
 var DtoValidationPipe_1;
-var _a;
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.DtoValidationPipe = void 0;
 const common_1 = require("@nestjs/common");
@@ -43,6 +42,6 @@ exports.DtoValidationPipe = DtoValidationPipe;
 exports.DtoValidationPipe = DtoValidationPipe = DtoValidationPipe_1 = __decorate([
     (0, common_1.Injectable)(),
     __param(0, (0, common_1.Optional)()),
-    __metadata("design:paramtypes", [typeof (_a = typeof common_1.ValidationPipeOptions !== "undefined" && common_1.ValidationPipeOptions) === "function" ? _a : Object])
+    __metadata("design:paramtypes", [Object])
 ], DtoValidationPipe);
 //# sourceMappingURL=dto-validation.pipe.js.map

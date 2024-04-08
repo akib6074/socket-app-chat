@@ -3,7 +3,6 @@ import { AppModule } from './app.module';
 import { ConfigService } from '@nestjs/config';
 import { Logger, VersioningType } from '@nestjs/common';
 import { SocketIOAdapter } from './socket-io-adapter';
-import * as basicAuth from 'express-basic-auth';
 import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
 const SWAGGER_ENVS = ['dev', 'prod', 'uat'];
 async function bootstrap() {
@@ -29,7 +28,7 @@ async function bootstrap() {
     ],
   });
   app.useWebSocketAdapter(new SocketIOAdapter(app, configService));
-
+  const basicAuth = require('express-basic-auth');
   if (SWAGGER_ENVS.includes(process.env.NODE_ENV || 'development')) {
     app.use(
       ['/apidoc'],

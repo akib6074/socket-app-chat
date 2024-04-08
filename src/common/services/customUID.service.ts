@@ -4,7 +4,7 @@ import { Repository } from "typeorm";
 import { UniqueIdLogicEntity } from "../entities/entities.config";
 import { SystemException } from "../exceptions/system.exception";
 import { isActive } from "../queries/is-active.query";
-import * as moment from "moment";
+import moment from "moment";
 @Injectable()
 export class CustomeUIDService {
     constructor(

@@ -1,2 +1,2 @@
-export declare const redisModule: Promise<DynamicModule>;
-export declare const jwtModule: any;
+export declare const redisModule: Promise<import("@nestjs/common").DynamicModule>;
+export declare const jwtModule: import("@nestjs/common").DynamicModule;

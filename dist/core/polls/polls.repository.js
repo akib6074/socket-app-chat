@@ -12,7 +12,6 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
 var PollsRepository_1;
-var _a, _b;
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.PollsRepository = void 0;
 const common_1 = require("@nestjs/common");
@@ -183,6 +182,7 @@ exports.PollsRepository = PollsRepository;
 exports.PollsRepository = PollsRepository = PollsRepository_1 = __decorate([
     (0, common_2.Injectable)(),
     __param(1, (0, common_1.Inject)(redis_module_1.IORedisKey)),
-    __metadata("design:paramtypes", [typeof (_a = typeof config_1.ConfigService !== "undefined" && config_1.ConfigService) === "function" ? _a : Object, typeof (_b = typeof ioredis_1.Redis !== "undefined" && ioredis_1.Redis) === "function" ? _b : Object])
+    __metadata("design:paramtypes", [config_1.ConfigService,
+        ioredis_1.Redis])
 ], PollsRepository);
 //# sourceMappingURL=polls.repository.js.map

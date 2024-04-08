@@ -9,7 +9,6 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var AuthMiddleware_1;
-var _a, _b;
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.AuthMiddleware = void 0;
 const common_1 = require("@nestjs/common");
@@ -72,6 +71,7 @@ let AuthMiddleware = AuthMiddleware_1 = class AuthMiddleware {
 exports.AuthMiddleware = AuthMiddleware;
 exports.AuthMiddleware = AuthMiddleware = AuthMiddleware_1 = __decorate([
     (0, common_1.Injectable)(),
-    __metadata("design:paramtypes", [typeof (_a = typeof config_1.ConfigService !== "undefined" && config_1.ConfigService) === "function" ? _a : Object, typeof (_b = typeof nestjs_redis_1.RedisService !== "undefined" && nestjs_redis_1.RedisService) === "function" ? _b : Object])
+    __metadata("design:paramtypes", [config_1.ConfigService,
+        nestjs_redis_1.RedisService])
 ], AuthMiddleware);
 //# sourceMappingURL=auth.middleware.js.map

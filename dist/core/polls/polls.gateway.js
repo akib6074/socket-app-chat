@@ -9,7 +9,6 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var PollsGateway_1;
-var _a;
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.PollsGateway = void 0;
 const common_1 = require("@nestjs/common");
@@ -43,7 +42,7 @@ let PollsGateway = PollsGateway_1 = class PollsGateway {
 exports.PollsGateway = PollsGateway;
 __decorate([
     (0, websockets_1.WebSocketServer)(),
-    __metadata("design:type", typeof (_a = typeof socket_io_1.Namespace !== "undefined" && socket_io_1.Namespace) === "function" ? _a : Object)
+    __metadata("design:type", socket_io_1.Namespace)
 ], PollsGateway.prototype, "io", void 0);
 exports.PollsGateway = PollsGateway = PollsGateway_1 = __decorate([
     (0, websockets_1.WebSocketGateway)({ namespace: ['private-chats'] }),

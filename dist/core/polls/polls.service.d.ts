@@ -9,11 +9,11 @@ export declare class PollsService {
     constructor(pollsRepository: PollsRepository, jwtService: JwtService);
     createPoll(fields: CreatePollFields): Promise<{
         poll: Poll;
-        accessToken: any;
+        accessToken: string;
     }>;
     joinPoll(fields: JoinPollFields): Promise<{
         poll: Poll;
-        accessToken: any;
+        accessToken: string;
     }>;
     rejoinPoll(fields: RejoinPollFields): Promise<Poll>;
     addParticipant(addParticipant: AddParticipantFields): Promise<Poll>;

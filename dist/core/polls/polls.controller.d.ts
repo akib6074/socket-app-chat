@@ -6,11 +6,11 @@ export declare class PollsController {
     constructor(pollsService: PollsService);
     create(createPollDto: CreatePollDto): Promise<{
         poll: import("./polls-types").Poll;
-        accessToken: any;
+        accessToken: string;
     }>;
     join(joinPollDto: JoinPollDto): Promise<{
         poll: import("./polls-types").Poll;
-        accessToken: any;
+        accessToken: string;
     }>;
     rejoin(request: RequestWithAuth): Promise<import("./polls-types").Poll>;
 }

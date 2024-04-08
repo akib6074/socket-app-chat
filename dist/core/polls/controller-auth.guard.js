@@ -9,7 +9,6 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var ControllerAuthGuard_1;
-var _a;
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.ControllerAuthGuard = void 0;
 const common_1 = require("@nestjs/common");
@@ -38,6 +37,6 @@ let ControllerAuthGuard = ControllerAuthGuard_1 = class ControllerAuthGuard {
 exports.ControllerAuthGuard = ControllerAuthGuard;
 exports.ControllerAuthGuard = ControllerAuthGuard = ControllerAuthGuard_1 = __decorate([
     (0, common_1.Injectable)(),
-    __metadata("design:paramtypes", [typeof (_a = typeof jwt_1.JwtService !== "undefined" && jwt_1.JwtService) === "function" ? _a : Object])
+    __metadata("design:paramtypes", [jwt_1.JwtService])
 ], ControllerAuthGuard);
 //# sourceMappingURL=controller-auth.guard.js.map

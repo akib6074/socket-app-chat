@@ -11,7 +11,6 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
-var _a;
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.CustomeUIDService = void 0;
 const common_1 = require("@nestjs/common");
@@ -19,7 +18,7 @@ const typeorm_1 = require("@nestjs/typeorm");
 const typeorm_2 = require("typeorm");
 const entities_config_1 = require("../entities/entities.config");
 const is_active_query_1 = require("../queries/is-active.query");
-const moment = require("moment");
+const moment_1 = require("moment");
 let CustomeUIDService = class CustomeUIDService {
     constructor(uniqueIdLogicRepository) {
         this.uniqueIdLogicRepository = uniqueIdLogicRepository;
@@ -31,7 +30,7 @@ let CustomeUIDService = class CustomeUIDService {
                 let number;
                 let format = customUserId.idFormat;
                 if (prefix == "credit-sales-invoice") {
-                    format = format + moment().format("YYMMDD") + '-';
+                    format = format + (0, moment_1.default)().format("YYMMDD") + '-';
                 }
                 let reset;
                 if (customUserId.resetFlag === true) {
@@ -69,6 +68,6 @@ exports.CustomeUIDService = CustomeUIDService;
 exports.CustomeUIDService = CustomeUIDService = __decorate([
     (0, common_1.Injectable)(),
     __param(0, (0, typeorm_1.InjectRepository)(entities_config_1.UniqueIdLogicEntity)),
-    __metadata("design:paramtypes", [typeof (_a = typeof typeorm_2.Repository !== "undefined" && typeorm_2.Repository) === "function" ? _a : Object])
+    __metadata("design:paramtypes", [typeorm_2.Repository])
 ], CustomeUIDService);
 //# sourceMappingURL=customUID.service.js.map

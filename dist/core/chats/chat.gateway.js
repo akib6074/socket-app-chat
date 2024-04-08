@@ -12,7 +12,6 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
 var ChatGateway_1;
-var _a;
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.ChatGateway = void 0;
 const common_1 = require("@nestjs/common");
@@ -65,7 +64,7 @@ let ChatGateway = ChatGateway_1 = class ChatGateway {
 exports.ChatGateway = ChatGateway;
 __decorate([
     (0, websockets_1.WebSocketServer)(),
-    __metadata("design:type", typeof (_a = typeof socket_io_1.Namespace !== "undefined" && socket_io_1.Namespace) === "function" ? _a : Object)
+    __metadata("design:type", socket_io_1.Namespace)
 ], ChatGateway.prototype, "io", void 0);
 __decorate([
     __param(0, (0, websockets_1.ConnectedSocket)()),

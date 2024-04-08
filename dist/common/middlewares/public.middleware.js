@@ -9,7 +9,6 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var PublicMiddleware_1;
-var _a;
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.PublicMiddleware = void 0;
 const common_1 = require("@nestjs/common");
@@ -41,6 +40,6 @@ let PublicMiddleware = PublicMiddleware_1 = class PublicMiddleware {
 exports.PublicMiddleware = PublicMiddleware;
 exports.PublicMiddleware = PublicMiddleware = PublicMiddleware_1 = __decorate([
     (0, common_1.Injectable)(),
-    __metadata("design:paramtypes", [typeof (_a = typeof nestjs_redis_1.RedisService !== "undefined" && nestjs_redis_1.RedisService) === "function" ? _a : Object])
+    __metadata("design:paramtypes", [nestjs_redis_1.RedisService])
 ], PublicMiddleware);
 //# sourceMappingURL=public.middleware.js.map
